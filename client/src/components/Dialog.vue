@@ -22,13 +22,13 @@
     </v-row>
 </template>
 <script setup lang="ts">
+import { computed } from "vue";
 import NewTask from "@/components/NewTask.vue"
 import DeleteTask from "@/components/DeleteTask.vue"
 import UpdateTask from "@/components/UpdateTask.vue"
 import dialogStore from "@/store/dialog"
 import { DialogNames } from "@/types";
 import { storeToRefs } from "pinia";
-import { computed } from "vue";
 
 const store = dialogStore()
 const { DStore } = storeToRefs(store);
