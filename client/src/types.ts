@@ -26,14 +26,20 @@ export interface LoginCredentials {
 }
 
 // Notification
+
+enum NotificationName {
+  Frined = "friend",
+  Collab = "collab"
+}
+
 interface NotificationActions {
   isRead: boolean,
-  isAccepted: boolean
-  action: string
+  isAccepted: boolean,
+  action: NotificationName
 }
 export interface Notification {
   pendingInvitation: {
-    friends: [{ id: number, action: NotificationActions }],
+    friends: [{ id: User["id"], action: NotificationActions }],
     collabs: [{ action: NotificationActions, collab: Omit<collab, "usersId"> }],
   }
   collabActions: [{ action: NotificationActions, collab: collab }]
