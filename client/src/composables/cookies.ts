@@ -10,7 +10,7 @@ export default () => {
     const removeCookie = (cookieName: string) => remove(cookieName)
 
     const cookieChangeListener = ({name, value, options}) => {
-        console.log('The cookie ', name, ' changed to ', value, ' options ', options)
+        //console.log('The cookie ', name, ' changed to ', value, ' options ', options)
       }
   
       addChangeListener(cookieChangeListener);
