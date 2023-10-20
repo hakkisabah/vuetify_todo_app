@@ -8,9 +8,9 @@ export default () =>{
             body: JSON.stringify({ username: 'mor_2314', password: '83r5^_' })
         })
         const user = await response.json()
-        const pic = defaultUserStore.find((e: User) => e.userName == username)
-        console.log("pic", pic)
-        return pic
+        const u = defaultUserStore.find((e: User) => e.userName == username)
+        console.log("u", u)
+        return u
     }
     return {fetchUser}
 }
